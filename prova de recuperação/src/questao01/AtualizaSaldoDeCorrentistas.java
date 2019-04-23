@@ -10,7 +10,7 @@ public class AtualizaSaldoDeCorrentistas {
 		
 		for (MovimentoConta movimentoConta : listaDeMovimentos) {
 			Correntista c = operacoes.encontraCorrentista(listaDeCorrentistas, movimentoConta.getCPFCorrentista());
-			c.setSaldo(movimentoConta.getValorMovimento());
+			c.setSaldo(c.getSaldo() + movimentoConta.getValorMovimento());
 		
 		}
 	}
